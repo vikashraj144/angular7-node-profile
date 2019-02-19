@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"ng s -o\" \" node app.js\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.0",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
+    "config": "^3.0.1",
     "cookie-parser": "^1.4.3",
     "core-js": "^2.5.4",
     "debug": "^2.6.8",
