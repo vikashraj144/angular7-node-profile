@@ -7,14 +7,15 @@ require('./server/config/knex')(app);
 
 var app = express();
 
-
 app.get('/',(req,res) => {
     res.json({
         message:'This is you route api.'
     })
 })
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'));
-console.log('Express server is listening on port: ' + app.get('port'));
-module.exports = app;
+//Create Server
+var server  = http.createServer(app);
+// Routes Initialization
+var routes = require('./server/routes');
+app.use('/', routes)
+server.listen(process.env.PORT || 3000, () => { console.log(`Server is listening on port -> ${process.env.PORT || 3000}`); })
