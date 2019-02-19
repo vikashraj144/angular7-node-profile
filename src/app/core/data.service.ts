@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { LoggerService } from './logger.service';
@@ -9,9 +9,12 @@ import { allReaders, allBooks } from '../data';
 import { Book } from '../models/book';
 import { ProfileError } from '../models/ProfileError';
 
+import { environment } from './../../environments/environment';
+
 @Injectable()
 export class DataService {
 
+  baseUrl = environment.baseUrl;
   mostPopularBook: Book = allBooks[0];
 
   getAuthorRecommendation(readerID: number): Promise<string> {
@@ -30,7 +33,7 @@ export class DataService {
               private http: HttpClient) { }
 
   getAllReaders(): Observable<Reader[] | ProfileError> {
-    return this.http.get<Reader[]>('http://localhost:3000/api/readers')
+    return this.http.get<Reader[]>(this.baseUrl + '/api/readers')
       .pipe(
         catchError(this.handleError)
       );
@@ -42,7 +45,7 @@ export class DataService {
     dataError.message = error.statusText;
     dataError.friendlyMessage = 'An error occurred retrieving data.';
     return throwError(dataError);
-  }  
+  }
 
   getReaderById(id: number): Reader {
     return allReaders.find(reader => reader.readerID === id);
@@ -52,8 +55,8 @@ export class DataService {
   //   return allBooks;
   // }
 
-  getAllBooks():Observable< Book[] | ProfileError> {
-    return this.http.get<Book[]>('http://localhost:3000/api/books')
+  getAllBooks(): Observable< Book[] | ProfileError> {
+    return this.http.get<Book[]>(this.baseUrl + '/api/books')
     .pipe(
       catchError(this.handleError)
     );
