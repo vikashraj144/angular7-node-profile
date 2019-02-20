@@ -49,3 +49,17 @@ module.exports.addBook = async (req,res) => {
         console.log(e);
     }
 }
+module.exports.deleteBook = async (req,res) => {
+    try {
+        console.log(req.body);
+        const bookID = req.body.bookID;
+        var data = await knex('books')
+                    .where('bookID','=',bookID)
+                    .del();
+        console.log(bookID,'data');
+        res.send({"status":200,
+                    "message":"delete success"});
+    } catch(e) {
+        console.log(e);
+    }
+}
