@@ -32,3 +32,20 @@ module.exports.updateBook = async (req,res) => {
         console.log(e);
     }
 }
+
+module.exports.addBook = async (req,res) => {
+    try {
+        console.log(req.body);
+        var data = await knex('books')
+                    .insert({ 
+                        title: req.body.title, 
+                        author: req.body.author,
+                        publicationYear: req.body.publicationYear 
+                    });
+        console.log(data,'data');
+        res.send({"status":200,
+                    "message":"Book added successfull"});
+    } catch(e) {
+        console.log(e);
+    }
+}
