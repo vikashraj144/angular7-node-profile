@@ -1,5 +1,8 @@
-var express = require('express');
+const express = require('express');
 const http = require('http');
+const morgan = require('morgan')
+const bodyParser = require('body-parser');
+
 const dotenv = require('dotenv').config({path:'./server/.env'})
 require('./server/config/knex')(app);
 
@@ -7,11 +10,9 @@ require('./server/config/knex')(app);
 
 var app = express();
 
-app.get('/',(req,res) => {
-    res.json({
-        message:'This is you route api.'
-    })
-})
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 
 // Add headers
 app.use(function (req, res, next) {
@@ -27,6 +28,12 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+
+app.get('/',(req,res) => {
+    res.json({
+        message:'This is you route api.'
+    })
+})
 
 //Create Server
 var server  = http.createServer(app);
