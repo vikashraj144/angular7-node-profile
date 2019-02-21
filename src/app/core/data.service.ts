@@ -25,7 +25,7 @@ export class DataService {
         } else {
           reject('Invalid reader ID');
         }
-      }, 2000); 
+      }, 2000);
     })
   }
 
@@ -61,6 +61,7 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+
   getBookById(id: number): Book {
     return allBooks.find(book => book.bookID === id);
   }

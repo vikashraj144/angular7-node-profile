@@ -44,8 +44,26 @@ describe('Books', () => {
             done();
           });
     });
-
-
+    
+      /* 
+      Test for updating the book by /PUT
+      */
+    it('it should update book by PUT method',(done) => {
+      chai.request(server)
+      .put('/api/books/updateBook')
+      .send({
+        "bookID": 1, 
+        "title": "Marie", 
+        "author": "argaret", 
+        "publicationYear": 2018
+      })
+      .end((err,res) => {
+        res.should.have.status(200);
+        // expect(res).to.have.status(200);
+        done();
+      })
+    })
+    
   });
 
 });

@@ -16,7 +16,7 @@ module.exports.getBook = async (req,res) => {
 
 module.exports.updateBook = async (req,res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         const bookID = req.body.bookID;
         var data = await knex('books')
                     .where('bookID','=',bookID)
@@ -25,7 +25,7 @@ module.exports.updateBook = async (req,res) => {
                         author: req.body.author,
                         publicationYear: req.body.publicationYear 
                     });
-        console.log(data,'data');
+        // console.log(data,'data');
         res.send({"status":200,
                     "message":"update success"});
     } catch(e) {
@@ -35,14 +35,14 @@ module.exports.updateBook = async (req,res) => {
 
 module.exports.addBook = async (req,res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         var data = await knex('books')
                     .insert({ 
                         title: req.body.title, 
                         author: req.body.author,
                         publicationYear: req.body.publicationYear 
                     });
-        console.log(data,'data');
+        // console.log(data,'data');
         res.send({"status":200,
                     "message":"Book added successfull"});
     } catch(e) {
@@ -51,12 +51,12 @@ module.exports.addBook = async (req,res) => {
 }
 module.exports.deleteBook = async (req,res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         const bookID = req.body.bookID;
         var data = await knex('books')
                     .where('bookID','=',bookID)
                     .del();
-        console.log(bookID,'data');
+        // console.log(bookID,'data');
         res.send({"status":200,
                     "message":"delete success"});
     } catch(e) {
