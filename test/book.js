@@ -29,4 +29,23 @@ describe('Books', () => {
       });
   });
 
+  /*
+  * Test the /GET Book by idroute
+  */
+  describe('/GET /api/books', () => {
+    it('it should GET by book id', (done) => {
+      chai.request(server)
+          .get('/api/books')
+          .query({bookID:'1'})
+          .end((err, res) => {
+              res.should.have.status(200);
+              res.body.should.be.a('array');
+              // res.body.length.should.be.eql(0);
+            done();
+          });
+    });
+
+
+  });
+
 });
