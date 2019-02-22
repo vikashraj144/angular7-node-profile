@@ -8,6 +8,8 @@ let chai = require('chai');
 let chaiHttp = require('chai-http');
 let server = require('../app');
 let should = chai.should();
+var expect = chai.expect;
+var assert = chai.assert;
 
 chai.use(chaiHttp);
 //Our parent block
@@ -58,8 +60,8 @@ describe('Books', () => {
         "publicationYear": 2018
       })
       .end((err,res) => {
-        res.should.have.status(200);
-        // expect(res).to.have.status(200);
+        // res.should.have.status(200);
+        expect(res).to.have.status(200);
         done();
       })
     })
