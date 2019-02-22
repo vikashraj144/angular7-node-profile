@@ -18,7 +18,7 @@ describe('Books', () => {
 /*
   * Test the /GET route
   */
-  describe('/GET /api/books', () => {
+  describe('1./GET all /api/books', () => {
       it('it should GET all the books', (done) => {
         chai.request(server)
             .get('/api/books')
@@ -34,11 +34,11 @@ describe('Books', () => {
   /*
   * Test the /GET Book by idroute
   */
-  describe('/GET /api/books', () => {
+  describe('2./GET book by id /api/books', () => {
     it('it should GET by book id', (done) => {
       chai.request(server)
           .get('/api/books')
-          .query({bookID:'1'})
+          .query({bookID:'2'})
           .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('array');
@@ -50,7 +50,7 @@ describe('Books', () => {
       /* 
       Test for updating the book by /PUT
       */
-    it('it should update book by PUT method',(done) => {
+    it('3.it should update book by PUT method',(done) => {
       chai.request(server)
       .put('/api/books/updateBook')
       .send({
@@ -63,6 +63,26 @@ describe('Books', () => {
         // res.should.have.status(200);
         expect(res).to.have.status(200);
         done();
+      })
+    })
+     /* 
+      Test for add book by /POST
+      */
+     it('4.it should add book by POST method',(done) => {
+      chai.request(server)
+      .post('/api/books/addBook')
+      .type('form')
+      .send({
+        "title": "sun", 
+        "author": "vikask", 
+        "publicationYear": 2019
+      })
+      .then( (res) => 
+        expect(res).to.have.status(200),
+        done()
+      )
+      .catch( (err) => {
+        throw err;
       })
     })
     
