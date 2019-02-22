@@ -67,7 +67,7 @@ describe('Books', () => {
       })
     })
      /* 
-      Test for add book by /POST Promises
+      Test for add book by /POST using Promises
       */
      it.skip('4.it should add book by POST method Promises',(done) => {
       chai.request(server)
@@ -78,8 +78,9 @@ describe('Books', () => {
         "author": "vikask", 
         "publicationYear": 2019
       })
-      .then( (res) => 
-        expect(res).to.have.status(200),
+      .then( (res) => {
+          expect(res).to.have.status(200)
+        },
         done()
       )
       .catch( (err) => {
@@ -88,7 +89,9 @@ describe('Books', () => {
     })
 
     /* 
-      Test for delete book by /delete Promises
+      Test for delete book by /delete using Promises
+      it.skip() you can skipe a test
+
       */
      it('4.it should delete book by delete method',(done) => {
       chai.request(server)
@@ -97,8 +100,11 @@ describe('Books', () => {
       .send({
         "bookID": 15
       })
-      .then( (res) => 
-        expect(res).to.have.status(200),
+      .then( (res) =>
+        {
+          expect(res).to.have.status(200),
+          assert.equal(typeof res ,'object')
+        },
         done()
       )
       .catch( (err) => {
