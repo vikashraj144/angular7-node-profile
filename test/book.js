@@ -17,9 +17,10 @@ describe('Books', () => {
     
 /*
   * Test the /GET route
+  it.skip() you can skipe a test
   */
   describe('1./GET all /api/books', () => {
-      it('it should GET all the books', (done) => {
+      it.skip('it should GET all the books', (done) => {
         chai.request(server)
             .get('/api/books')
             .end((err, res) => {
@@ -66,9 +67,9 @@ describe('Books', () => {
       })
     })
      /* 
-      Test for add book by /POST
+      Test for add book by /POST Promises
       */
-     it('4.it should add book by POST method',(done) => {
+     it('4.it should add book by POST method Promises',(done) => {
       chai.request(server)
       .post('/api/books/addBook')
       .type('form')
