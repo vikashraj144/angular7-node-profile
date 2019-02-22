@@ -20,7 +20,7 @@ describe('Books', () => {
   it.skip() you can skipe a test
   */
   describe('1./GET all /api/books', () => {
-      it.skip('it should GET all the books', (done) => {
+      it('it should GET all the books', (done) => {
         chai.request(server)
             .get('/api/books')
             .end((err, res) => {
@@ -69,7 +69,7 @@ describe('Books', () => {
      /* 
       Test for add book by /POST Promises
       */
-     it('4.it should add book by POST method Promises',(done) => {
+     it.skip('4.it should add book by POST method Promises',(done) => {
       chai.request(server)
       .post('/api/books/addBook')
       .type('form')
@@ -86,6 +86,27 @@ describe('Books', () => {
         throw err;
       })
     })
+
+    /* 
+      Test for delete book by /delete Promises
+      */
+     it('4.it should delete book by delete method',(done) => {
+      chai.request(server)
+      .delete('/api/books/deleteBook')
+      .type('form')
+      .send({
+        "bookID": 15
+      })
+      .then( (res) => 
+        expect(res).to.have.status(200),
+        done()
+      )
+      .catch( (err) => {
+        throw err;
+      })
+    })
+    
+    /* Testing end here */
     
   });
 
