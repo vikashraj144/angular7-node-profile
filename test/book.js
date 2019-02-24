@@ -26,7 +26,8 @@ describe('Books', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('array');
-                // res.body.length.should.be.eql(0);
+                assert.equal(typeof res.body ,'object')
+                // assert.length
               done();
             });
       });
@@ -103,7 +104,12 @@ describe('Books', () => {
       .then( (res) =>
         {
           expect(res).to.have.status(200),
-          assert.equal(typeof res ,'object')
+          assert.equal(typeof res.body ,'object'),
+          assert.isNotNull(res.body ,'body should not be null'),
+          assert.deepEqual(res.body,{
+            "status": 200,
+            "message": "delete success"
+        })
         },
         done()
       )
