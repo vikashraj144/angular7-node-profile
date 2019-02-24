@@ -3,6 +3,8 @@ const http = require('http');
 const morgan = require('morgan')
 const bodyParser = require('body-parser');
 
+// dotenv configuration like below
+// require('dotenv').config({ path: `variables.${process.env.NODE_ENV}.env` });
 const dotenv = require('dotenv').config({path:'./server/.env'})
 require('./server/config/knex')(app);
 
