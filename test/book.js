@@ -26,8 +26,9 @@ describe('Books', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('array');
-                assert.equal(typeof res.body ,'object')
-                // assert.length
+                assert.equal(typeof res.body ,'object'),
+                assert.isNotNull(res.body ,'body should not be null'),
+
               done();
             });
       });
@@ -44,6 +45,7 @@ describe('Books', () => {
           .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('array');
+              assert.isNotNull(res.body ,'body should not be null'),
               // res.body.length.should.be.eql(0);
             done();
           });
@@ -64,6 +66,7 @@ describe('Books', () => {
       .end((err,res) => {
         // res.should.have.status(200);
         expect(res).to.have.status(200);
+        assert.isNotNull(res.body ,'body should not be null'),
         done();
       })
     })
@@ -109,7 +112,12 @@ describe('Books', () => {
           assert.deepEqual(res.body,{
             "status": 200,
             "message": "delete success"
-        })
+        }),
+
+        assert.include(res.body,{
+          "status": 200,
+          "message": "delete success"
+      })
         },
         done()
       )
