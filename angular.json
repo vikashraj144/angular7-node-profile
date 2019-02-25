@@ -3,17 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-project": {
+    "profiler": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-first-project",
+            "outputPath": "dist/profiler",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,8 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+ 
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -59,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-first-project:build"
+            "browserTarget": "profiler:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-first-project:build:production"
+              "browserTarget": "profiler:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-first-project:build"
+            "browserTarget": "profiler:build"
           }
         },
         "test": {
@@ -81,9 +86,10 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
+              "../node_modules/font-awesome/css/font-awesome.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "../node_modules/font-awesome/css/font-awesome.css"
+
             ],
             "scripts": [],
             "assets": [
@@ -106,7 +112,7 @@
         }
       }
     },
-    "my-first-project-e2e": {
+    "profiler-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-first-project:serve"
+            "devServerTarget": "profiler:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-first-project:serve:production"
+              "devServerTarget": "profiler:serve:production"
             }
           }
         },
@@ -135,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "my-first-project"
+  "defaultProject": "profiler"
 }
