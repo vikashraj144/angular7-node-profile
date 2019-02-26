@@ -14,6 +14,7 @@ import { CoreModule } from './core/core.module';
 import { HeaderComponent } from './components/header/header.component';
 import { LeadContentComponent } from './components/lead-content/lead-content.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     AddReaderComponent,
     HeaderComponent,
     LeadContentComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
