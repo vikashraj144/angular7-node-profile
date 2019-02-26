@@ -12,6 +12,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
 import { CoreModule } from './core/core.module';
 import { HeaderComponent } from './components/header/header.component';
+import { LeadContentComponent } from './components/lead-content/lead-content.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
     EditReaderComponent,
     EditBookComponent,
     AddReaderComponent,
-    HeaderComponent
+    HeaderComponent,
+    LeadContentComponent
   ],
   imports: [
     BrowserModule,
