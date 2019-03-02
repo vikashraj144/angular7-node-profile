@@ -11,6 +11,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
 import { CoreModule } from './core/core.module';
+import { HeaderComponent } from './components/header/header.component';
+import { LeadContentComponent } from './components/lead-content/lead-content.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { ProjectComponent } from './components/project/project.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +27,16 @@ import { CoreModule } from './core/core.module';
     DashboardComponent,
     EditReaderComponent,
     EditBookComponent,
-    AddReaderComponent
+    AddReaderComponent,
+    HeaderComponent,
+    LeadContentComponent,
+    AboutUsComponent,
+    ExperienceComponent,
+    EducationComponent,
+    ProjectComponent,
+    SkillsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
