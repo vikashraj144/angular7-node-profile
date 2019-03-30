@@ -14,7 +14,7 @@ export class LeadContentComponent implements OnInit {
   constructor(private profilerService: ProfilerService) { }
 
   ngOnInit() {
-    this.profilerService.getEducation()
+    this.profilerService.getLead()
     .subscribe(d=>{
       console.log("data",d);
       this.leadData = d
