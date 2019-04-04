@@ -22,6 +22,13 @@ export class ProfilerService {
     );
   }
 
+  getLead() : Observable<Lead | ProfileError>{
+    return this.http.get<Lead>(this.baseUrl + '/assets/json/lead.json')
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse): Observable<ProfileError> {
     const dataError = new ProfileError();
     dataError.errorNumber = 100;
