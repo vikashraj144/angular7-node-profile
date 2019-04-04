@@ -29,6 +29,13 @@ export class ProfilerService {
     );
   }
 
+  getExperience() : Observable<Experience[] | ProfileError>{
+    return this.http.get<Experience[]>(this.baseUrl + '/assets/json/experience.json')
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse): Observable<ProfileError> {
     const dataError = new ProfileError();
     dataError.errorNumber = 100;
