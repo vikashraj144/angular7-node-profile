@@ -22,14 +22,14 @@ export class ProfilerService {
     );
   }
 
-  getLead() : Observable<Lead | ProfileError>{
+  getLead(): Observable<Lead | ProfileError>{
     return this.http.get<Lead>(this.baseUrl + '/assets/json/lead.json')
     .pipe(
       catchError(this.handleError)
     );
   }
 
-  getExperience() : Observable<Experience[] | ProfileError>{
+  getExperience(): Observable<Experience[] | ProfileError>{
     return this.http.get<Experience[]>(this.baseUrl + '/assets/json/experience.json')
     .pipe(
       catchError(this.handleError)
