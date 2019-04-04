@@ -1,6 +1,32 @@
-{
-    "designation":"",
-    "organization":"",
-    "currentCompany":"",
-    "jodDescribtion":""
-}
+[
+    {
+        "organization":"WalkingTree, Hyderabad, telangana",
+        "designation":"Senior Software Developer",
+        "jodDescribtion":"",
+        "isCurrentCompany":false
+    },
+    {
+        "organization":"Bridging health care, Chandigarh",
+        "designation":"Senior Software Developer",
+        "jodDescribtion":"",
+        "isCurrentCompany":false
+    },
+    {
+        "organization":"Technotronics",
+        "designation":"Senior Software Developer",
+        "jodDescribtion":"",
+        "isCurrentCompany":false
+    },
+    {
+        "organization":"A1-Technology",
+        "designation":"Senior Software Developer",
+        "jodDescribtion":"",
+        "isCurrentCompany":false
+    },
+    {
+        "organization":"Aryaan Solutions",
+        "designation":"Senior Software Developer",
+        "jodDescribtion":"",
+        "isCurrentCompany":false
+    }
+]
