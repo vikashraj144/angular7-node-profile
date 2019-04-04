@@ -1,8 +1,8 @@
-{
-    "education":"",
-    "Course":"",
-    "Specialization":"",
-    "University/Institute":"",
-    "courseType":"",
-    "passoutYear":""
-}
+[{
+    "education":"Bachelor Degree",
+    "Course":"B.tech",
+    "Specialization":"Computer science",
+    "University/Institute":"Punjab Technical University (PTU)",
+    "courseType":"Regular",
+    "passoutYear":"2012"
+}]
