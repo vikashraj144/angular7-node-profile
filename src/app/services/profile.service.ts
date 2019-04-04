@@ -5,9 +5,11 @@ import { catchError } from 'rxjs/operators';
 
 import { environment } from './../../environments/environment';
 import { Education } from '../models/education';
+import { Skills } from '../models/skills';
 import { ProfileError } from '../models/ProfileError';
 import { Lead } from '../models/lead';
 import { Experience } from '../models/experience';
+import { Projects } from '../models/projects';
 
 @Injectable()
 
@@ -31,6 +33,13 @@ export class ProfilerService {
 
   getExperience(): Observable<Experience[] | ProfileError>{
     return this.http.get<Experience[]>(this.baseUrl + '/assets/json/experience.json')
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getSkills(): Observable<Skills[] | ProfileError>{
+    return this.http.get<Skills[]>(this.baseUrl + '/assets/json/skills.json')
     .pipe(
       catchError(this.handleError)
     );
