@@ -13,18 +13,18 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'home', component: DashboardComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'education', component: EducationComponent },
   { path: 'projects', component: ProjectComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contact', component: ContactComponent },
-  
+
   { path: 'addreader', component: AddReaderComponent },
   { path: 'editreader/:id', component: EditReaderComponent },
   { path: 'editbook/:id', component: EditBookComponent },
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
