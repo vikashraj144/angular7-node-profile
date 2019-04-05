@@ -1,9 +1,12 @@
 
 <div id="skills">
   <h2 class="heading">Skills</h2>
+  <!-- {{skills | json}} -->
   <ul>
-      <li>HTML</li>
-      <li>HTML5</li>
+      <li *ngFor="let skill of skills">
+        {{skill.skill}}
+      </li>
+      <!-- <li>HTML5</li>
       <li>CSS</li>
       <li>CSS3</li>
       <li>Javascript</li>
@@ -13,6 +16,6 @@
       <li>PWAs</li>
       <li>Service Worker</li>
       <li>Gulp</li>
-      <li>Git</li>
+      <li>Git</li> -->
   </ul>
 </div>
