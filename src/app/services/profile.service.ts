@@ -45,6 +45,13 @@ export class ProfilerService {
     );
   }
 
+  getProject(): Observable<Projects[] | ProfileError>{
+    return this.http.get<Projects[]>(this.baseUrl + '/assets/json/projects.json')
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse): Observable<ProfileError> {
     const dataError = new ProfileError();
     dataError.errorNumber = 100;
