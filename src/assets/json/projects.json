@@ -1,8 +1,16 @@
-{
-    "projectTitle":"test",
-    "client":"marsh",
-    "projectSataus":"In progress | finshed",
+[{
+    "projectTitle":"CSI",
+    "client":"Ameriprise financial",
+    "projectSataus":"Finshed",
     "startedWorkingFrom":"",
     "workingTill":"",
-    "projectDetails":""
-}
+    "projectDetails":"Worked on client location and coordinated with onsite and offsite project manager. Gather the requirement for UI implementation from scratch. used bamboo for creating build and bitbucket for version control.which provide to customer service representative to cater clients to register to policy and update operation likes profile update, subscribe, reset password enable and disable."
+},
+{
+    "projectTitle":"Line Board",
+    "client":"Walkintree",
+    "projectSataus":"Finshed",
+    "startedWorkingFrom":"",
+    "workingTill":"",
+    "projectDetails":"Sr software developer: - Coordination with project lead to requirement gathering. Managing the all dashboard component and their respective design."
+}]
