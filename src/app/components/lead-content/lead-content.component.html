@@ -1,4 +1,4 @@
-<div id="lead-content">
+<div id="lead-content" *ngIf="leadData">
   <h1>{{leadData.firstName }} {{leadData.middleName }} {{leadData.lastName }}</h1>
   <h2>{{leadData.headline}}</h2>
   <a href="#" class="btn-rounded-white">Download Resume</a>
