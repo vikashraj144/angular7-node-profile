@@ -1,6 +1,20 @@
+[
 {
-    "skills":"",
-    "version":"",
+    "skill":"Angular",
+    "version":"2,4,5,6,7",
     "lastUsed":"",
-    "experience":""
+    "experience":"1.5"
+},
+{
+    "skill":"React",
+    "version":"16",
+    "lastUsed":"",
+    "experience":"1"
+},
+{
+    "skill":"Node",
+    "version":"6,8,10",
+    "lastUsed":"",
+    "experience":"3"
 }
+]
