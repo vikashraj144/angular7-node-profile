@@ -1,8 +1,10 @@
-[{
-    "education":"Bachelor Degree",
-    "Course":"B.tech",
-    "Specialization":"Computer science",
-    "University/Institute":"Punjab Technical University (PTU)",
-    "courseType":"Regular",
-    "passoutYear":"2012"
-}]
+[
+    {
+        "education":"Bachelor Degree",
+        "Course":"B.tech",
+        "Specialization":"Computer science",
+        "Institute":"Punjab Technical University (PTU)",
+        "courseType":"Regular",
+        "passoutYear":"2012"
+    }
+]
