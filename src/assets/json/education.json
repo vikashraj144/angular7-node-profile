@@ -6,5 +6,21 @@
         "Institute":"Punjab Technical University (PTU)",
         "courseType":"Regular",
         "passoutYear":"2012"
+    },
+    {
+        "education":"Intermediate",
+        "Course":"Intermediate",
+        "Specialization":"Science",
+        "Institute":"BIEB",
+        "courseType":"Regular",
+        "passoutYear":"2006"
+    },
+    {
+        "education":"10th",
+        "Course":"10th",
+        "Specialization":"Science",
+        "Institute":"BSEB",
+        "courseType":"Regular",
+        "passoutYear":"2004"
     }
 ]
