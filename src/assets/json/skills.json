@@ -16,5 +16,41 @@
     "version":"6,8,10",
     "lastUsed":"",
     "experience":"3"
+},
+{
+    "skill":"PHP",
+    "version":"",
+    "lastUsed":"",
+    "experience":"3"
+},
+{
+    "skill":"HTML",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"CSS",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"Javascript",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"Git,Bitbucket,Gitlab",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"Jquery",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
 }
 ]
