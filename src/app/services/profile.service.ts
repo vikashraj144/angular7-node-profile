@@ -17,6 +17,13 @@ export class ProfilerService {
     baseUrl = environment.baseUrlLocal;
     constructor(private http: HttpClient) { }
 
+    getCountry(){
+      return this.http.get(this.baseUrl + '/assets/json/data.json')
+      .pipe(
+        catchError(this.handleError)
+      );
+    }
+
   getEducation(): Observable<Education | ProfileError> {
     return this.http.get<Education>(this.baseUrl + '/assets/json/education.json')
       .pipe(
