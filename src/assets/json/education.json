@@ -5,7 +5,8 @@
         "Specialization":"Computer science",
         "Institute":"Punjab Technical University (PTU)",
         "courseType":"Regular",
-        "passoutYear":"2012"
+        "passoutYear":"2012",
+        "duration":"2008-2012"
     },
     {
         "education":"Intermediate",
@@ -13,7 +14,8 @@
         "Specialization":"Science",
         "Institute":"BIEB",
         "courseType":"Regular",
-        "passoutYear":"2006"
+        "passoutYear":"2006",
+        "duration":"2004-2006"        
     },
     {
         "education":"10th",
@@ -21,6 +23,7 @@
         "Specialization":"Science",
         "Institute":"BSEB",
         "courseType":"Regular",
-        "passoutYear":"2004"
+        "passoutYear":"2004",
+        "duration":"2004"        
     }
 ]

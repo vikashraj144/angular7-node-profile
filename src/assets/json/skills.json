@@ -3,11 +3,17 @@
     "skill":"Angular",
     "version":"2,4,5,6,7",
     "lastUsed":"",
-    "experience":"1.5"
+    "experience":"2"
 },
 {
     "skill":"React",
     "version":"16",
+    "lastUsed":"",
+    "experience":"1"
+},
+{
+    "skill":"Redux",
+    "version":"4",
     "lastUsed":"",
     "experience":"1"
 },
@@ -49,6 +55,18 @@
 },
 {
     "skill":"Jquery",
+    "version":"",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"Bootstrap 3,4",
+    "version":"3,4",
+    "lastUsed":"",
+    "experience":""
+},
+{
+    "skill":"Material design",
     "version":"",
     "lastUsed":"",
     "experience":""
