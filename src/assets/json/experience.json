@@ -1,30 +1,35 @@
 [
     {
-        "organization":"WalkingTree, Hyderabad, telangana",
+        "organization":"M3bi India Pvt Ltd",
+        "location":"Hyderabad",
         "designation":"Senior Software Developer",
-        "jodDescribtion":"",
-        "isCurrentCompany":false
+        "jodDescribtion":"Worked on client side Amerprise and Marsh",
+        "isCurrentCompany":true
     },
     {
-        "organization":"Bridging health care, Chandigarh",
+        "organization":"Bridging health care",
+        "location":"Mohali Chandigarh",
         "designation":"Senior Software Developer",
         "jodDescribtion":"",
         "isCurrentCompany":false
     },
     {
         "organization":"Technotronics",
+        "location":"Mohali Chandigarh",
         "designation":"Senior Software Developer",
         "jodDescribtion":"",
         "isCurrentCompany":false
     },
     {
         "organization":"A1-Technology",
+        "location":"Mohali Chandigarh",
         "designation":"Senior Software Developer",
         "jodDescribtion":"",
         "isCurrentCompany":false
     },
     {
         "organization":"Aryaan Solutions",
+        "location":"Bangalore",
         "designation":"Senior Software Developer",
         "jodDescribtion":"",
         "isCurrentCompany":false
