@@ -492,7 +492,7 @@ footer {
         content: '';
         top: 0;
         bottom: 0;
-        left: 303px;
+        left: 20%;
         right: auto;
         height: 100%;
         width: 3px;
@@ -508,7 +508,7 @@ footer {
         background: $base-color;
         background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
         top: 100%;
-        left: 303px;
+        left: 20%;
     }
 }
 
@@ -606,6 +606,7 @@ footer {
         float: left;
         margin: 0;
         color: $heading;
+        margin: 0 0 15px 0;
     }
 
     span {
