@@ -14,7 +14,7 @@ import { environment } from './../../environments/environment';
 @Injectable()
 export class DataService {
 
-  baseUrl = environment.baseUrl;
+  // baseUrl = environment.baseUrl;
   mostPopularBook: Book = allBooks[0];
 
   getAuthorRecommendation(readerID: number): Promise<string> {
@@ -33,7 +33,7 @@ export class DataService {
               private http: HttpClient) { }
 
   getAllReaders(): Observable<Reader[] | ProfileError> {
-    return this.http.get<Reader[]>(this.baseUrl + '/api/readers')
+    return this.http.get<Reader[]>('/api/readers')
       .pipe(
         catchError(this.handleError)
       );
@@ -56,7 +56,7 @@ export class DataService {
   // }
 
   getAllBooks(): Observable< Book[] | ProfileError> {
-    return this.http.get<Book[]>(this.baseUrl + '/api/books')
+    return this.http.get<Book[]>('/api/books')
     .pipe(
       catchError(this.handleError)
     );
