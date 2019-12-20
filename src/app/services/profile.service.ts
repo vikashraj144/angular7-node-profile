@@ -14,7 +14,7 @@ import { Projects } from '../models/projects';
 @Injectable()
 
 export class ProfilerService {
-    baseUrl = environment.baseUrlLocal;
+    // baseUrl = environment.baseUrlLocal;
     constructor(private http: HttpClient) { }
 
     getCountry(){
