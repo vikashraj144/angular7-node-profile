@@ -24,17 +24,17 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getAllBooks().subscribe(
-      (data: Book[]) => this.allBooks = data,
-      (err) => console.log('erro in getallbook', err),
-      () => this.loggerService.log('All done in getAllbook')
-    );
+    // this.dataService.getAllBooks().subscribe(
+    //   (data: Book[]) => this.allBooks = data,
+    //   (err) => console.log('erro in getallbook', err),
+    //   () => this.loggerService.log('All done in getAllbook')
+    // );
     this.dataService.getAllReaders()
-      .subscribe(
-        (data: Reader[]) => this.allReaders = data,
-        (err: ProfileError) => console.log(err.friendlyMessage),
-        () => this.loggerService.log('All done getting readers!')
-      );
+      // .subscribe(
+      //   (data: Reader[]) => this.allReaders = data,
+      //   (err: ProfileError) => console.log(err.friendlyMessage),
+      //   () => this.loggerService.log('All done getting readers!')
+      // );
     this.mostPopularBook = this.dataService.mostPopularBook;
 
     this.getAuthorRecommendationAsync(1)
