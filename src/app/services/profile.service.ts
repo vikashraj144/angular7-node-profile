@@ -14,46 +14,46 @@ import { Projects } from '../models/projects';
 @Injectable()
 
 export class ProfilerService {
-    baseUrl = environment.baseUrlLocal;
+    // baseUrl = environment.baseUrlLocal;
     constructor(private http: HttpClient) { }
 
     getCountry(){
-      return this.http.get(this.baseUrl + '/assets/json/data.json')
+      return this.http.get('/assets/json/data.json')
       .pipe(
         catchError(this.handleError)
       );
     }
 
   getEducation(): Observable<Education | ProfileError> {
-    return this.http.get<Education>(this.baseUrl + '/assets/json/education.json')
+    return this.http.get<Education>('/assets/json/education.json')
       .pipe(
         catchError(this.handleError)
     );
   }
 
   getLead(): Observable<Lead | ProfileError>{
-    return this.http.get<Lead>(this.baseUrl + '/assets/json/lead.json')
+    return this.http.get<Lead>('/assets/json/lead.json')
     .pipe(
       catchError(this.handleError)
     );
   }
 
   getExperience(): Observable<Experience[] | ProfileError>{
-    return this.http.get<Experience[]>(this.baseUrl + '/assets/json/experience.json')
+    return this.http.get<Experience[]>('/assets/json/experience.json')
     .pipe(
       catchError(this.handleError)
     );
   }
 
   getSkills(): Observable<Skills[] | ProfileError>{
-    return this.http.get<Skills[]>(this.baseUrl + '/assets/json/skills.json')
+    return this.http.get<Skills[]>('/assets/json/skills.json')
     .pipe(
       catchError(this.handleError)
     );
   }
 
   getProject(): Observable<Projects[] | ProfileError>{
-    return this.http.get<Projects[]>(this.baseUrl + '/assets/json/projects.json')
+    return this.http.get<Projects[]>('/assets/json/projects.json')
     .pipe(
       catchError(this.handleError)
     );
